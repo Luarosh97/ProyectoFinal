@@ -86,6 +86,12 @@ namespace VeterinariaGUI
               VeterinarioDtg.DataSource = respuestaConsulta.empleados;
 
             }
+
+            else if (TipoVeterinarioCmb.SelectedIndex == 1){
+                DateTime fecha = DateFecha.Value.Date;
+                VeterinarioDtg.DataSource = empleadoService.ConsultarXFecha(fecha);
+
+            }
         }
     }
 }

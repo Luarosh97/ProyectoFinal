@@ -90,6 +90,11 @@ namespace VeterinariaGUI
             {
                 dataGridView1.DataSource = respuestaConsulta.clientes;
             }
+            else if(TipoConsultaCmb.SelectedIndex == 1){
+
+                DateTime fecha = DateFechaClientes.Value.Date;
+                dataGridView1.DataSource = clienteservice.ConsultarXFecha(fecha);
+            }
         }
     }
 }

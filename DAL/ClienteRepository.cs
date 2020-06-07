@@ -109,5 +109,10 @@ namespace DAL
             }
         }
 
+        public IList<Cliente> ConsultarXFecha(DateTime fecha)
+        {
+            return ConsultarClientes().Where(E => E.FechaRegistro.Year.Equals(fecha.Year) && E.FechaRegistro.Month.Equals(fecha.Month)).ToList();
+        }
+
     }
 }

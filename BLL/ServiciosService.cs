@@ -144,6 +144,17 @@ namespace BLL
 
         }
 
+        public double SumarServicios()
+        {
+            conexion.Open();
+            double ValorTotal = serviciorepositorio.SumarValorServicios();
+            conexion.Close();
+            return ValorTotal;
+        }
+
+
+
+
 
     }
 }

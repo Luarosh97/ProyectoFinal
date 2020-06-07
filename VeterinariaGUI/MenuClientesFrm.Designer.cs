@@ -39,6 +39,7 @@
             this.TipoConsultaCmb = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.DateFechaClientes = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
@@ -102,6 +103,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel2.Controls.Add(this.DateFechaClientes);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.TipoConsultaCmb);
             this.panel2.Controls.Add(this.label2);
@@ -130,7 +132,8 @@
             // 
             this.TipoConsultaCmb.FormattingEnabled = true;
             this.TipoConsultaCmb.Items.AddRange(new object[] {
-            "Clientes"});
+            "Clientes",
+            "ConsultaPorFechaClientes"});
             this.TipoConsultaCmb.Location = new System.Drawing.Point(441, 94);
             this.TipoConsultaCmb.Name = "TipoConsultaCmb";
             this.TipoConsultaCmb.Size = new System.Drawing.Size(121, 21);
@@ -161,6 +164,13 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // DateFechaClientes
+            // 
+            this.DateFechaClientes.Location = new System.Drawing.Point(178, 94);
+            this.DateFechaClientes.Name = "DateFechaClientes";
+            this.DateFechaClientes.Size = new System.Drawing.Size(200, 20);
+            this.DateFechaClientes.TabIndex = 4;
             // 
             // MenuClientesFrm
             // 
@@ -196,5 +206,6 @@
         private System.Windows.Forms.ComboBox TipoConsultaCmb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker DateFechaClientes;
     }
 }

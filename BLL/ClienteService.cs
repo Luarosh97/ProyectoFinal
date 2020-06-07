@@ -147,6 +147,15 @@ namespace BLL
         }
 
 
+        public IList<Cliente> ConsultarXFecha(DateTime fecha)
+        {
+            conexion.Open();
+            IList<Cliente> clientes = clienterepositorio.ConsultarXFecha(fecha);
+            conexion.Close();
+            return clientes;
+        }
+
+
     }
     
 

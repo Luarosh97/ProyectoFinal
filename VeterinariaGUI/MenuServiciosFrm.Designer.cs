@@ -39,11 +39,15 @@
             this.Servicioscmb = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.serviciosDtg = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TotalServiciostxt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.VeterinarioCmb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviciosDtg)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -159,8 +163,34 @@
             this.serviciosDtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.serviciosDtg.Location = new System.Drawing.Point(0, 216);
             this.serviciosDtg.Name = "serviciosDtg";
-            this.serviciosDtg.Size = new System.Drawing.Size(798, 321);
+            this.serviciosDtg.Size = new System.Drawing.Size(800, 232);
             this.serviciosDtg.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel2.Controls.Add(this.TotalServiciostxt);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(0, 447);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 94);
+            this.panel2.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(532, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Total Servicios";
+            // 
+            // TotalServiciostxt
+            // 
+            this.TotalServiciostxt.Location = new System.Drawing.Point(615, 34);
+            this.TotalServiciostxt.Name = "TotalServiciostxt";
+            this.TotalServiciostxt.Size = new System.Drawing.Size(100, 20);
+            this.TotalServiciostxt.TabIndex = 1;
             // 
             // MenuServiciosFrm
             // 
@@ -168,6 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 540);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.serviciosDtg);
             this.Controls.Add(this.VeterinarioCmb);
             this.Controls.Add(this.panel1);
@@ -181,6 +212,8 @@
             this.VeterinarioCmb.ResumeLayout(false);
             this.VeterinarioCmb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviciosDtg)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +230,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AgregarServicioBtn;
         private System.Windows.Forms.DataGridView serviciosDtg;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox TotalServiciostxt;
+        private System.Windows.Forms.Label label3;
     }
 }

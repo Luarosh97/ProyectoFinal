@@ -39,6 +39,7 @@
             this.TipoVeterinarioCmb = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.VeterinarioDtg = new System.Windows.Forms.DataGridView();
+            this.DateFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
@@ -92,6 +93,7 @@
             // VeterinarioCmb
             // 
             this.VeterinarioCmb.BackColor = System.Drawing.Color.DarkOrange;
+            this.VeterinarioCmb.Controls.Add(this.DateFecha);
             this.VeterinarioCmb.Controls.Add(this.AgregarVeterinarioBtn);
             this.VeterinarioCmb.Controls.Add(this.BuscarVeterinarioBtn);
             this.VeterinarioCmb.Controls.Add(this.TipoVeterinarioCmb);
@@ -123,7 +125,7 @@
             this.BuscarVeterinarioBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BuscarVeterinarioBtn.Image = ((System.Drawing.Image)(resources.GetObject("BuscarVeterinarioBtn.Image")));
             this.BuscarVeterinarioBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BuscarVeterinarioBtn.Location = new System.Drawing.Point(593, 97);
+            this.BuscarVeterinarioBtn.Location = new System.Drawing.Point(660, 97);
             this.BuscarVeterinarioBtn.Name = "BuscarVeterinarioBtn";
             this.BuscarVeterinarioBtn.Size = new System.Drawing.Size(75, 57);
             this.BuscarVeterinarioBtn.TabIndex = 2;
@@ -136,8 +138,9 @@
             // 
             this.TipoVeterinarioCmb.FormattingEnabled = true;
             this.TipoVeterinarioCmb.Items.AddRange(new object[] {
-            "Veterinarios"});
-            this.TipoVeterinarioCmb.Location = new System.Drawing.Point(409, 112);
+            "Veterinarios",
+            "ConsultaPorFechaVeterinarios"});
+            this.TipoVeterinarioCmb.Location = new System.Drawing.Point(504, 113);
             this.TipoVeterinarioCmb.Name = "TipoVeterinarioCmb";
             this.TipoVeterinarioCmb.Size = new System.Drawing.Size(121, 21);
             this.TipoVeterinarioCmb.TabIndex = 1;
@@ -161,6 +164,13 @@
             this.VeterinarioDtg.Size = new System.Drawing.Size(823, 322);
             this.VeterinarioDtg.TabIndex = 8;
             this.VeterinarioDtg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VeterinarioDtg_CellContentClick);
+            // 
+            // DateFecha
+            // 
+            this.DateFecha.Location = new System.Drawing.Point(244, 114);
+            this.DateFecha.Name = "DateFecha";
+            this.DateFecha.Size = new System.Drawing.Size(200, 20);
+            this.DateFecha.TabIndex = 10;
             // 
             // MenuVeterinarioFrm
             // 
@@ -197,5 +207,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AgregarVeterinarioBtn;
         private System.Windows.Forms.DataGridView VeterinarioDtg;
+        private System.Windows.Forms.DateTimePicker DateFecha;
     }
 }

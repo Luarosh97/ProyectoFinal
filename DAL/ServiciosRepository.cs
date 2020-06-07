@@ -102,5 +102,12 @@ namespace DAL
                 var filas = command.ExecuteNonQuery();
             }
         }
+
+        public double SumarValorServicios()
+        {
+            return ConsultarServicios().Sum(S => S.Base);
+
+        }
     }
+
 }

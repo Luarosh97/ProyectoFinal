@@ -98,8 +98,31 @@ namespace DAL
             return mascotas;
         }
 
+        public int Totalizar()
+        {
+          return ConsultarMascotas().Count();
+        }
 
-      
+        public int TotalizarTipo(string tipo)
+        {
+
+            return ConsultarMascotas().Where(p => p.TipoMascota.Equals(tipo)).Count();
+        }
+        public IList<Mascota> ConsultarPerros()
+        {
+            return ConsultarMascotas().Where(p => p.TipoMascota == "Perro").ToList();
+        }
+
+        public IList<Mascota> ConsultarLoros()
+        {
+            return ConsultarMascotas().Where(p => p.TipoMascota == "Loro").ToList();
+        }
+
+        public IList<Mascota> ConsultarGatos()
+        {
+            return ConsultarMascotas().Where(p => p.TipoMascota == "Gato").ToList();
+        }
+
     }
 
 

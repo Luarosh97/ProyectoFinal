@@ -144,5 +144,16 @@ namespace BLL
 
         }
 
+        public IList<Empleado> ConsultarXFecha(DateTime fecha)
+        {
+            conexion.Open();
+            IList<Empleado> empleados = empleadorepositorio.ConsultarXFecha(fecha);
+            conexion.Close();
+            return empleados;
+        }
+
+
+
+
     }
 }

@@ -36,12 +36,6 @@ namespace BLL
         }
 
 
-  
-      
-
-
-
-
         public ResponseConsultaMascota Consultar()
         {
             ResponseConsultaMascota respuesta = new ResponseConsultaMascota();
@@ -73,8 +67,49 @@ namespace BLL
         }
 
 
+        public int TotalizarPorTipo(string tipo)
+        {
+            conexion.Open();
+            int Total = mascotarepositorio.TotalizarTipo(tipo);
+            conexion.Close();
+            return Total;
+        }
 
-   
+        public int TotalizarMascotas()
+        {
+            conexion.Open();
+            int Total = mascotarepositorio.Totalizar();
+            conexion.Close();
+            return Total;
+        }
+
+        public IList<Mascota> ConsultarPerros()
+        {
+            conexion.Open();
+            IList<Mascota> mascotas = mascotarepositorio.ConsultarPerros();
+            conexion.Close();
+            return mascotas;
+        }
+
+        public IList<Mascota> ConsultarLoros()
+        {
+            conexion.Open();
+            IList<Mascota> mascotas = mascotarepositorio.ConsultarLoros();
+            conexion.Close();
+            return mascotas;
+        }
+
+        public IList<Mascota> ConsultarGatos()
+        {
+            conexion.Open();
+            IList<Mascota> mascotas = mascotarepositorio.ConsultarGatos();
+            conexion.Close();
+            return mascotas;
+        }
+
+
+
+
 
     }
 }

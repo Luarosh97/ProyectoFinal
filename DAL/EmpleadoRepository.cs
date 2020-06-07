@@ -114,5 +114,11 @@ namespace DAL
                 var filas = command.ExecuteNonQuery();
             }
         }
+
+        public IList<Empleado> ConsultarXFecha(DateTime fecha)
+        {
+            return ConsultarEmpleados().Where(E => E.FechaIngreso.Year.Equals(fecha.Year) && E.FechaIngreso.Month.Equals(fecha.Month)).ToList();
+        }
+
     }
 }
